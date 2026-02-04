@@ -1,38 +1,81 @@
 body {
+  margin: 0;
+  height: 100vh;
   background: linear-gradient(135deg, #ffd6e8, #ffeef5);
   font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen {
   text-align: center;
-  height: 100vh;
-  margin: 0;
 }
 
-.container {
-  margin-top: 20vh;
+h1 {
+  font-size: 3rem;
 }
 
-input {
-  padding: 10px;
-  font-size: 16px;
-  text-align: center;
-  width: 180px;
+.hint {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
 }
 
-button {
-  margin: 15px;
-  padding: 12px 24px;
-  font-size: 16px;
+#dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #333;
+}
+
+.dot.filled {
+  background-color: #333;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 15px;
+  justify-content: center;
+}
+
+.keypad button {
+  height: 80px;
+  font-size: 1.8rem;
+  border-radius: 50%;
   border: none;
-  border-radius: 8px;
   cursor: pointer;
+}
+
+.keypad .empty {
+  background: none;
+}
+
+.buttons {
+  margin-top: 40px;
 }
 
 .yes {
   background-color: #ff4d88;
   color: white;
+  font-size: 1.5rem;
+  padding: 15px 30px;
+  border-radius: 10px;
+  margin-right: 20px;
 }
 
 .no {
   background-color: #ccc;
+  font-size: 1.5rem;
+  padding: 15px 30px;
+  border-radius: 10px;
 }
 
 .hidden {
@@ -41,5 +84,6 @@ button {
 
 #error {
   color: red;
-  margin-top: 10px;
+  margin-top: 20px;
+  font-size: 1.2rem;
 }
