@@ -1,9 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Test</title>
+  <meta charset="UTF-8">
+  <title>💖 For You 💖</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>If you see this, it works 💖</h1>
+
+  <!-- Password Screen -->
+  <div class="container" id="password-screen">
+    <h1>🔒 Secret Page</h1>
+    <p>Hint: our anniversary 💕</p>
+    <input type="password" id="password" placeholder="Enter the date">
+    <br>
+    <button onclick="checkPassword()">Unlock 💖</button>
+    <p id="error"></p>
+  </div>
+
+  <!-- Valentine Screen -->
+  <div class="container hidden" id="valentine-screen">
+    <h1>💘 Will you be my Valentine? 💘</h1>
+    <div class="buttons">
+      <button class="yes" onclick="sayYes()">YES 💖</button>
+      <button class="no" id="noBtn">NO 🙃</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
