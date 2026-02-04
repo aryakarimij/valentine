@@ -2,24 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>💖 For You 💖</title>
+  <title>💖 Secret 💖</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Password Screen -->
-  <div class="container" id="password-screen">
+  <!-- PASSWORD SCREEN -->
+  <div id="password-screen" class="screen">
     <h1>🔒 Secret Page</h1>
-    <p>Hint: our anniversary 💕</p>
-    <input type="password" id="password" placeholder="Enter the date">
-    <br>
-    <button onclick="checkPassword()">Unlock 💖</button>
+    <p class="hint">Hint: our anniversary 💕</p>
+
+    <div id="dots">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <div class="keypad">
+      <button onclick="pressDigit('1')">1</button>
+      <button onclick="pressDigit('2')">2</button>
+      <button onclick="pressDigit('3')">3</button>
+      <button onclick="pressDigit('4')">4</button>
+      <button onclick="pressDigit('5')">5</button>
+      <button onclick="pressDigit('6')">6</button>
+      <button onclick="pressDigit('7')">7</button>
+      <button onclick="pressDigit('8')">8</button>
+      <button onclick="pressDigit('9')">9</button>
+      <button class="empty"></button>
+      <button onclick="pressDigit('0')">0</button>
+      <button onclick="deleteDigit()">⌫</button>
+    </div>
+
     <p id="error"></p>
   </div>
 
-  <!-- Valentine Screen -->
-  <div class="container hidden" id="valentine-screen">
+  <!-- VALENTINE SCREEN -->
+  <div id="valentine-screen" class="screen hidden">
     <h1>💘 Will you be my Valentine? 💘</h1>
+
     <div class="buttons">
       <button class="yes" onclick="sayYes()">YES 💖</button>
       <button class="no" id="noBtn">NO 🙃</button>
