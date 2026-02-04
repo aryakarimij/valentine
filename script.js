@@ -41,9 +41,33 @@ function checkPassword() {
 }
 
 // 💖 YES button
+
 function sayYes() {
-  alert("YAYYYYY 💖💖💖");
+  document.getElementById("valentine-screen").classList.add("hidden");
+  document.getElementById("yes-screen").classList.remove("hidden");
+  startConfetti();
 }
+
+function startConfetti() {
+  const confettiContainer = document.getElementById("confetti");
+  const colors = ["#ff4d88", "#ffd1dc", "#ffffff", "#ff99cc"];
+
+  for (let i = 0; i < 150; i++) {
+    const confetti = document.createElement("div");
+    confetti.classList.add("confetti");
+
+    confetti.style.left = Math.random() * 100 + "vw";
+    confetti.style.backgroundColor =
+      colors[Math.floor(Math.random() * colors.length)];
+    confetti.style.animationDuration = 2 + Math.random() * 3 + "s";
+    confetti.style.opacity = Math.random();
+
+    confettiContainer.appendChild(confetti);
+
+    setTimeout(() => confetti.remove(), 5000);
+  }
+}
+
 
 // 😈 NO button chaos
 document.addEventListener("DOMContentLoaded", () => {
@@ -75,3 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
   noBtn.addEventListener("mouseenter", moveNo);
   noBtn.addEventListener("click", moveNo);
 });
+
+
+
