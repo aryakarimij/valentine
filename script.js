@@ -1,4 +1,4 @@
-const PASSWORD = "14102022"; // <-- CHANGE THIS
+const PASSWORD = 14102022; // <-- CHANGE THIS
 let input = "";
 
 function pressDigit(digit) {
