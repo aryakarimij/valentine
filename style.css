@@ -138,4 +138,20 @@ h1 {
   margin-bottom: 30px;
 }
 
+.since {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.replay {
+  margin-top: 25px;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  background-color: #ff4d88;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
 
