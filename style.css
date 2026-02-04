@@ -116,11 +116,10 @@ h1 {
 
 .confetti {
   position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: red;
-  animation: fall 3s linear infinite;
+  font-size: 24px;
+  animation: fall 4s linear infinite;
 }
+
 
 @keyframes fall {
   0% {
