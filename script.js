@@ -1,14 +1,16 @@
-const PASSWORD = "14102022"; // CHANGE THIS
+const PASSWORD = "YYYYMMDD"; // <-- CHANGE THIS
 let input = "";
 
 function pressDigit(digit) {
+  console.log("Pressed:", digit); // debug (safe to keep)
+
   if (input.length >= PASSWORD.length) return;
 
   input += digit;
   updateDots();
 
   if (input.length === PASSWORD.length) {
-    checkPassword();
+    setTimeout(checkPassword, 200);
   }
 }
 
@@ -19,8 +21,13 @@ function deleteDigit() {
 
 function updateDots() {
   const dots = document.querySelectorAll(".dot");
+
   dots.forEach((dot, index) => {
-    dot.classList.toggle("filled", index < input.length);
+    if (index < input.length) {
+      dot.classList.add("filled");
+    } else {
+      dot.classList.remove("filled");
+    }
   });
 }
 
