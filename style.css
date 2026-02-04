@@ -134,7 +134,9 @@ h1 {
 }
 
 .yes-gif {
-  width: 220px;
-  margin-bottom: 20px;
+  width: 380px;
+  max-width: 90vw;
+  margin-bottom: 30px;
 }
+
 
