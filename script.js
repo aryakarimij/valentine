@@ -50,21 +50,20 @@ function sayYes() {
 
 function startConfetti() {
   const confettiContainer = document.getElementById("confetti");
-  const colors = ["#ff4d88", "#ffd1dc", "#ffffff", "#ff99cc"];
+  const hearts = ["💖", "💘", "💝", "💕", "❤️"];
 
-  for (let i = 0; i < 150; i++) {
-    const confetti = document.createElement("div");
-    confetti.classList.add("confetti");
+  for (let i = 0; i < 120; i++) {
+    const heart = document.createElement("div");
+    heart.classList.add("confetti");
+    heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
 
-    confetti.style.left = Math.random() * 100 + "vw";
-    confetti.style.backgroundColor =
-      colors[Math.floor(Math.random() * colors.length)];
-    confetti.style.animationDuration = 2 + Math.random() * 3 + "s";
-    confetti.style.opacity = Math.random();
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = 3 + Math.random() * 3 + "s";
+    heart.style.opacity = Math.random();
 
-    confettiContainer.appendChild(confetti);
+    confettiContainer.appendChild(heart);
 
-    setTimeout(() => confetti.remove(), 5000);
+    setTimeout(() => heart.remove(), 6000);
   }
 }
 
